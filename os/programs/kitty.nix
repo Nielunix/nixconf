@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }: {
- flake.homeModules.kitty = { pkgs, ... }: {
+ flake.homeModules.kitty = { pkgs, lib, ... }: {
  	programs.kitty = {
 		enable = true;
-		settings = {
+		settings = lib.mkDefault {
 			confirm_os_window_close = 0;
 			dynamic_background_opacity = true;
 			enable_audio_bell = false;

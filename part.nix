@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, stylix,... }: {
   imports = [
     inputs.home-manager.flakeModules.home-manager
   ];

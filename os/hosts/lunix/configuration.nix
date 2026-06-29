@@ -1,10 +1,11 @@
  { self, inputs, ... }: {
  flake.nixosModules.lunix = { pkgs, lib, ... }: {
-    # import any other modules from here
     imports = [
       self.nixosModules.lunixHardware
-      self.nixosModules.niri
+      # self.nixosModules.niri
       self.nixosModules.nh
+      self.nixosModules.programs
+      self.nixosModules.myStylix
 
       inputs.home-manager.nixosModules.default
     ];
@@ -12,6 +13,7 @@
 	environment.systemPackages = with pkgs; [
 		neovim
 		ripgrep
+		xwayland-satellite
 	];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -42,8 +44,7 @@
 
   services.xserver.enable = true;
 
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.displayManager.ly.enable = true;
 
   services.xserver.xkb = {
     layout = "us";
@@ -76,9 +77,6 @@
   };
 
   home-manager.users.lunix = self.homeModules.lunixHome;
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

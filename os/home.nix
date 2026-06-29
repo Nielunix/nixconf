@@ -1,24 +1,16 @@
 { self, inputs, ... }: {
- flake.homeModules.lunixHome = { pkgs, ... }: {
+ flake.homeModules.lunixHome = { pkgs, lib, config, ... }: {
     imports = [
 	self.homeModules.kitty
+	self.homeModules.pkgs
+	self.homeModules.git
     ];
-
-    home.packages = [ 
-    	pkgs.hello
-	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    ];
-
-      programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name  = "Lunix";
-        email = "niels.canonville@proton.me";
-      };
-      init.defaultBranch = "main";
+    xdg.configFile."niri/config.kdl" = {
+      	source = config.lib.file.mkOutOfStoreSymlink "/home/lunix/nixconf/os/programs/niri/config.kdl";
+	recursive = true;
     };
-};
+
     home.stateVersion = "26.05";
   };
 }
+

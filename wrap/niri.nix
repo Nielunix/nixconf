@@ -16,9 +16,9 @@
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
-        input.keyboard.xkb.layout = "us,ua";
+        input.keyboard.xkb.layout = "us";
 
-        layout.gaps = 5;
+        layout.gaps = 10;
 
         binds = {
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
