@@ -2,7 +2,7 @@
  flake.homeModules.kitty = { pkgs, lib, ... }: {
  	programs.kitty = {
 		enable = true;
-		settings = lib.mkDefault {
+		settings = lib.mkForce {
 			confirm_os_window_close = 0;
 			dynamic_background_opacity = true;
 			enable_audio_bell = false;
@@ -15,9 +15,9 @@
 			cursor_trail_start_threshold = 0;
 			cursor_trail_decay = "0.01 0.05";
 			cursor_shape = "beam";
-			cursor_blink = true;
+			cursor_blink = false;
 
-			font_size = 16;
+			font_size = 15;
 		};
 	};
 };

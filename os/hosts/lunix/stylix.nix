@@ -9,8 +9,8 @@
     autoEnable = true;
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.departure-mono;
-        name = "DepartureMono Nerd Font";
+        package = pkgs.nerd-fonts.caskaydia-mono;
+        name = "CaskaydiaMono Nerd Font";
       };
       };
     };

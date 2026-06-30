@@ -5,6 +5,10 @@
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       cmatrix
       fastfetch
+      zoxide
+      vesktop
+      eza
+      rofi
     ];
   };
 }

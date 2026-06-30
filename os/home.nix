@@ -4,6 +4,7 @@
 	self.homeModules.kitty
 	self.homeModules.pkgs
 	self.homeModules.git
+	self.homeModules.fish
     ];
     xdg.configFile."niri/config.kdl" = {
       	source = config.lib.file.mkOutOfStoreSymlink "/home/lunix/nixconf/os/programs/niri/config.kdl";

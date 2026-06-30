@@ -6,6 +6,7 @@
       self.nixosModules.nh
       self.nixosModules.programs
       self.nixosModules.myStylix
+      self.nixosModules.nvf
 
       inputs.home-manager.nixosModules.default
     ];
@@ -68,6 +69,7 @@
 
 
   users.users."lunix" = {
+    shell = pkgs.fish;
     isNormalUser = true;
     description = "Lunix";
     extraGroups = [ "networkmanager" "wheel" ];
