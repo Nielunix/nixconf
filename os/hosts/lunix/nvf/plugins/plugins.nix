@@ -1,7 +1,7 @@
 {...}: {
-  flake.nixosModules.nvfPlugins = { pkgs, ... }: {
+  flake.nixosModules.nvfPlugins = { pkgs, lib, ... }: {
     imports = [];
-    programs.nvf.vim = {
+    programs.nvf.settings.vim = {
     
       #autopairs
       autopairs.nvim-autopairs.enable = true;
@@ -16,7 +16,7 @@
 
       #Blink-cmp
       autocomplete.blink-cmp = {
-        enable =  true;
+        enable =  false;
         friendly-snippets.enable = true;
         setupOpts = {
           keymap = {
@@ -36,6 +36,57 @@
           };
         };
       };
+
+      formatter.conform-nvim = {
+        enable = true;
+        setupOpts = {
+          notify_on_error = false;
+          default_format_opts = {
+            lsp_format = "fallback";
+          };
+          formatters_by_ft = {
+            javascript = lib.mkLuaInline ''{ 'prettierd', 'prettier', stop_after_first = true }'';
+            qml = lib.mkLuaInline ''{ 'qmlformat', 'js_beautify', stop_after_first = true }'';
+          };
+        };
+      };
+
+      #lsp
+          lsp = {
+      # This must be enabled for the language modules to hook into
+      # the LSP API.
+      enable = true;
+
+        formatOnSave = true;
+        lspkind.enable = false;
+        lightbulb.enable = true;
+        lspsaga.enable = false;
+        trouble.enable = true;
+        otter-nvim.enable = true;
+        nvim-docs-view.enable = true;
+        presets.harper.enable = true;
+        lspconfig.enable = true;
+        servers = {
+          nixd.enable = true;
+          qmlls.enable = true;
+        };
+
+      };
+
+      #languages
+      languages = {
+        enableFormat = true;
+        enableTreesitter = true;
+        enableExtraDiagnostics = true;
+        nix.enable = true;
+        qml.enable = true;
+        typescript.enable = true;
+        json.enable = true;
+        toml.enable = true;
+      };
+
+      telescope.enable = true;
+      treesitter.enable = true;
     };
   };
 }
