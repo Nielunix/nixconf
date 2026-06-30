@@ -78,8 +78,12 @@
     ];
   };
 
-  home-manager.users.lunix = self.homeModules.lunixHome;
-
+  home-manager = {
+  	backupFileExtension = "back";
+  	users.lunix = {
+  		imports = [ self.homeModules.lunixHome ];
+		};
+	};
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

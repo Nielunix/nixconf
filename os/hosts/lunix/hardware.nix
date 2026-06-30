@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 	flake.nixosModules.lunixHardware = { config, lib, pkgs, modulesPath, ... }: {
-		imports =
+ imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
@@ -10,22 +10,23 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/8a599677-3d0a-4565-bdea-27e7d189423b";
+    { device = "/dev/disk/by-uuid/8072f518-d5e1-4837-bfae-3b6fdf1a9219";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/168C-CFE7";
+    { device = "/dev/disk/by-uuid/1FA6-9BE6";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/58d620a7-28db-49f5-bb5c-0a64e995812c"; }
+    [ { device = "/dev/disk/by-uuid/ceb9293c-ac7b-40dd-94e7-4a7c5eeb7b1a"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
 		
 };
 }

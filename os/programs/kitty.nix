@@ -11,9 +11,9 @@
 			background_opacity = "0.9";
 			background_blur = 5;
 
-			cursor_trail = 30;
+			cursor_trail = 1;
 			cursor_trail_start_threshold = 0;
-			cursor_trail_decay = "0.01 0.05";
+			cursor_trail_decay = "0.01 0.30";
 			cursor_shape = "beam";
 			cursor_blink = false;
 

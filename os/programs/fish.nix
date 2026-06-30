@@ -3,7 +3,9 @@
     programs.fish = {
       enable = true;
           interactiveShellInit = ''
-          set fish_greeting "       Wellcome Lunix ................. Rrwaarrr"
+          function fish_greeting
+	  	echo 	Welcome Lunix ................. Rrwaarrr
+	end
           zoxide init fish | source
 
           fish_add_path /home/lugryn/.cargo/bin

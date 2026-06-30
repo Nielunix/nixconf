@@ -16,7 +16,7 @@
       # self.nixosModules.nvfPlugins
     ];
     programs.nvf = {
-      enable = true;
+      enable = false;
       settings = {
         vim = {
           viAlias = true;
