@@ -17,6 +17,9 @@
   perSystem = {pkgs, ...}: {
     packages.neovim = inputs.wrapper-modules.wrappers.neovim.wrap {
       inherit pkgs;
+      imports = [
+        self.module.neovim.config
+      ];
     };
   };
 }
