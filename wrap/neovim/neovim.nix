@@ -14,7 +14,7 @@
     };
   };
 
-  perSystem = {pkgs, ...}: {
+  perSystem = {pkgs, config, ...}: {
     packages.neovim = inputs.wrapper-modules.wrappers.neovim.wrap {
       inherit pkgs;
       imports = [
