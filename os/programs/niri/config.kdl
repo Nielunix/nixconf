@@ -14,7 +14,7 @@ input {
             // variant ""
         }
         repeat-delay 300
-        repeat-rate 40
+        repeat-rate 75
         track-layout "global"
     }
     touchpad {

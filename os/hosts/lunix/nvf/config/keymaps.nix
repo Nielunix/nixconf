@@ -3,9 +3,9 @@
     programs.nvf.settings.vim.keymaps = [
       {
         mode = ["n" "v"];
-        key = "<leader>f";
-        action = "function() require('conform').format { async = true } end";
-        desc = "Format buffer";
+        key = "<leader>cf";
+        action = "<cmd>lua require('conform').format { async = true }<CR>";
+        desc = "Format Buffer";
       }
     ];
   };

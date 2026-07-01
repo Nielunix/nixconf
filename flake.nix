@@ -14,8 +14,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules"; # wrapper
+    wrapper-modules = {
+      url = "github:BirdeeHub/nix-wrapper-modules"; # wrapper
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
+    #neovim-lazyloader
+    plugins-lze = {
+      url = "github:BirdeeHub/lze";
+      flake = false;
+    };
+    plugins-lzextras = {
+      url = "github:BirdeeHub/lzextras";
+      flake = false;
+    };
     #cool programs
 
     #zen-browser

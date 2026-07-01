@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   flake.nixosModules.nvfOptions = {...}: {
     programs.nvf.settings.vim = {
       options = {
