@@ -135,4 +135,11 @@ return {
 			},
 		},
 	},
+	{
+		"qmlls",
+		for_cat = "qml",
+		lsp = {
+			filetypes = { "qml", "qmljs" },
+		},
+	},
 }
