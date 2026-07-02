@@ -42,11 +42,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #nvf
-    nvf = {
-      url = "github:NotAShelf/nvf";
+    #quickshell
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   # import every .nix file in this and child directories exept flake.nix

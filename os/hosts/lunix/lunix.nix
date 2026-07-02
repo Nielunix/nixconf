@@ -16,7 +16,6 @@
       self.nixosModules.programs
       self.nixosModules.services
       self.nixosModules.myStylix
-      self.nixosModules.nvf
       self.nixosModules.pkgs
       inputs.home-manager.nixosModules.default
     ];

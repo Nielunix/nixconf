@@ -140,6 +140,9 @@ return {
 		for_cat = "qml",
 		lsp = {
 			filetypes = { "qml", "qmljs" },
+			settings = {
+				qmlls = {},
+			},
 		},
 	},
 }

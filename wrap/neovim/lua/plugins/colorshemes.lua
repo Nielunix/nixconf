@@ -26,6 +26,18 @@ return {
 		"vim-moonfly-colors",
 		auto_enable = true,
 		colorscheme = "moonfly",
+		after = function ()
+			vim.g.moonflyCursorColor = true
+			vim.g.moonflyItalics = false
+			vim.g.moonflyNormalPmenu = true
+			vim.g.moonflyNormalFloat = true
+			vim.g.moonflyTerminalColors = false
+			vim.g.moonflyTransparent = true
+			vim.g.moonflyUndercurls = false
+			vim.g.moonflyUnderlineMatchParen = true
+			vim.g.moonflyVirtualTextColor = true
+			vim.cmd("colorscheme moonfly")
+		end
 	},
 	{
 		"gruvbox.nvim",
