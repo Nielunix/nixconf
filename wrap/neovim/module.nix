@@ -57,7 +57,7 @@
           "onelight" = onedarkpro-nvim;
           "moonfly" = vim-moonfly-colors;
           "everforest" = everforest;
-          "gruvbox" = gruvbox;
+          "gruvbox" = gruvbox-nvim;
         }
       );
     };
@@ -166,6 +166,7 @@
 
         neo-tree-nvim
         telescope-nvim
+        telescope-ui-select-nvim
         todo-comments-nvim
         nvim-treesitter-textobjects
         nvim-treesitter.withAllGrammars
@@ -174,6 +175,8 @@
         nui-nvim
         friendly-snippets
         neogit
+
+        indent-blankline-nvim
       ];
     };
 

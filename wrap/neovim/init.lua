@@ -95,6 +95,7 @@ end)
 
 --options
 require("config.options")
+require("config.diagnostic")
 require("config.keymaps")
 require("config.autocmds")
 --plugins
@@ -111,4 +112,8 @@ plug.load('plugins.neotree')
 plug.load('plugins.luasnip')
 plug.load('plugins.mini')
 plug.load('plugins.neogit')
-
+plug.load('plugins.telescope')
+plug.load('plugins.plenary')
+plug.load('plugins.todo')
+plug.load('plugins.gitsigns')
+plug.load('plugins.lint')

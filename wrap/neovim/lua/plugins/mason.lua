@@ -2,6 +2,7 @@ return {
   {
     "mason.nvim",
     enabled = not nixInfo.isNix,
+    dep_of = "nvim-lspconfig",
     priority = 100, -- <- run lsp hook before lspconfig's hook
     on_plugin = { "nvim-lspconfig" },
     lsp = function(plugin)

@@ -4,8 +4,9 @@ return {
   cmd = "Neotree",
   after = function()
     require('neo-tree').setup {
-    filesystem = {
+     filesystem = {
       window = {
+        width = 28,
         mappings = {
           ['<leader>q'] = 'close_window',
         },
@@ -13,11 +14,6 @@ return {
     },
   }
   end
-  },
-  {
-    "plenary.nvim",
-    auto_enable = true,
-    dep_of = { "neo-tree.nvim" },
   },
   {
     "nui.nvim",
