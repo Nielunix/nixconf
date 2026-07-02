@@ -13,6 +13,11 @@ do
 	vim.o.breakindent = true
 	vim.o.undofile = true
 	vim.o.ignorecase = true
+	vim.o.shiftwidth = 2
+	vim.o.smartindent = true
+	vim.o.autoindent = true
+	vim.o.tabstop = 2
+	vim.o.softtabstop = 2
 
 	vim.o.smartcase = true
 	vim.o.signcolumn = "yes"
@@ -31,7 +36,6 @@ do
 	vim.o.scrolloff = 10
 	vim.o.confirm = true
 	vim.o.termguicolors = true
-	vim.o.shiftwidth = 2
-	vim.o.hlsearch = true
+		vim.o.hlsearch = true
 	vim.o.completeopt = 'menu,preview,noselect'
 end

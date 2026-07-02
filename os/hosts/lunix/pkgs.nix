@@ -12,29 +12,27 @@
       awww
       wl-clipboard
 
-      #neovim dependencies
       gnumake
       unzip
       wget
       cargo
-      ruby
-      nodejs
       python3
-      python313Packages.pip
-      tree-sitter
-      lua55Packages.tree-sitter-cli
       fd
       qt6.qtbase
       qt6.qtdeclarative
       qt6.qtlanguageserver
-      go
-      lua55Packages.luarocks
-      julia
-
+      
+      deezer-desktop
       cmatrix
       impala
       wiremix
       bluetui
+
+      gamescope
+
+      heroic # install heroic launcher
+      lutris # install lutris launcher
+      protonup-qt # GUI for installing custom Proton versions like GE_Proton
     ];
   };
 }

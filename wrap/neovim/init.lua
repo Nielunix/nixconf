@@ -93,13 +93,22 @@ nixInfo.lze.h.lsp.set_ft_fallback(function(name)
 	end
 end)
 
+--options
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
-require('lze').load("plugins.colorshemes")
+--plugins
+local plug = require('lze')
+plug.load("plugins.colorshemes")
+plug.load("plugins.conform")
+plug.load('plugins.which-key')
+plug.load('plugins.lspconfig')
+plug.load('plugins.mason')
+plug.load('plugins.blink')
+plug.load('plugins.treesitter')
+plug.load('plugins.autopairs')
+plug.load('plugins.neotree')
+plug.load('plugins.luasnip')
+plug.load('plugins.mini')
+plug.load('plugins.neogit')
 
--- NOTE: You will likely want to break this up into more files.
--- You can call this more than once.
--- You can also include other files from within the specs via an `import` spec.
--- see https://github.com/BirdeeHub/lze?tab=readme-ov-file#structuring-your-plugins
--- nixInfo.lze.load({})

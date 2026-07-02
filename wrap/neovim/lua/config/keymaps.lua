@@ -41,4 +41,19 @@ do
 		":lua vim.pack.update(nil, { offline = true })",
 		{ desc = "[I]nspect plugins states" }
 	)
+	
+	--neotree
+	vim.keymap.set('n', '<leader>e', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
+	
+	--neogit
+	vim.keymap.set(
+		'n',
+		'<leader>gg',
+		'<cmd>Neogit<CR>',
+		{ desc = "Open Neogit UI" }
+	)
+
+
+
+
 end

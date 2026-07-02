@@ -116,6 +116,7 @@
       runtimePkgs = with pkgs; [
         lua-language-server
         stylua
+        qt6.qtdeclarative
       ];
     };
 
@@ -141,21 +142,38 @@
           # You can override defaults from the parent spec here
           lazy = false;
         }
+        nvim-autopairs
+        luasnip
         nvim-lspconfig
-        nvim-surround
-        vim-startuptime
         blink-cmp
         blink-compat
         cmp-cmdline
-        colorful-menu-nvim
         lualine-nvim
         gitsigns-nvim
         which-key-nvim
-        fidget-nvim
         nvim-lint
         conform-nvim
+ 
+        mason-nvim
+        mason-lspconfig-nvim
+        mason-tool-installer-nvim
+
+        mini-ai
+        mini-nvim
+        mini-surround
+        mini-statusline
+        mini-icons
+
+        neo-tree-nvim
+        telescope-nvim
+        todo-comments-nvim
         nvim-treesitter-textobjects
         nvim-treesitter.withAllGrammars
+
+        plenary-nvim
+        nui-nvim
+        friendly-snippets
+        neogit
       ];
     };
 
