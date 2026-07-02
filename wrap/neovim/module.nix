@@ -28,9 +28,9 @@
       # You can declare your own options!
       options.settings.colorscheme = lib.mkOption {
         type = lib.types.str;
-        default = "onedark_dark";
+        default = "catppuccin";
       };
-      config.settings.colorscheme = "moonfly"; # <- just demonstrating that it is an option
+      config.settings.colorscheme = "catppuccin"; # <- just demonstrating that it is an option
       # and grab it in lua with `require(vim.g.nix_info_plugin_name)("onedark_dark", "settings", "colorscheme") == "moonfly"`
       config.specs.colorscheme = {
         lazy = true;
@@ -44,6 +44,7 @@
             "moonfly" = vim-moonfly-colors;
             "everforest" = everforest;
             "gruvbox" = gruvbox-nvim;
+            "catppuccin" = catppuccin-nvim;
           }
         );
       };
@@ -96,7 +97,6 @@
         data = null;
         runtimePkgs = with pkgs; [
           qt6.qtdeclarative
-          kdePackages.qtdeclarative
         ];
       };
       # You can use the before and after fields to run them before or after other specs or spec of lists of specs

@@ -52,8 +52,12 @@ do
 		'<cmd>Neogit<CR>',
 		{ desc = "Open Neogit UI" }
 	)
+	
 
 
+vim.keymap.set("n", "<leader>de", function()
+  vim.diagnostic.open_float(nil, { scope = "cursor" })
+end, { desc = "Open Floating Diagnostic" })
 
 
 end

@@ -16,6 +16,7 @@
         ls = "eza -l";
         cd = "z";
         nhu = "nh os switch ~/nixconf#lunix";
+        vi = "nvim";
       };
     };
   };

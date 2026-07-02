@@ -36,6 +36,13 @@ do
 	vim.o.scrolloff = 10
 	vim.o.confirm = true
 	vim.o.termguicolors = true
-		vim.o.hlsearch = true
-	vim.o.completeopt = 'menu,preview,noselect'
+	vim.o.hlsearch = true
+	vim.o.completeopt = "menu,preview,noselect"
+
+	-- NOTE: hilight bug corrector
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { bg = "NONE" })
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { bg = "NONE" })
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { bg = "NONE" })
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "NONE" })
+	vim.api.nvim_set_hl(0, "CursorLine", { bg = "NONE" })
 end
