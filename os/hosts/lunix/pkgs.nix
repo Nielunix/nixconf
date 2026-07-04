@@ -13,7 +13,12 @@
         fishPlugins.tide
         awww
         wl-clipboard
+        cava
 
+        swaylock
+        swayidle
+        
+        libimobiledevice
         gnumake
         unzip
         wget
@@ -24,6 +29,7 @@
         qt6.qtdeclarative
         qt6.qtlanguageserver
 
+        nautilus
         deezer-desktop
         cmatrix
         impala
@@ -35,6 +41,7 @@
         heroic # install heroic launcher
         lutris # install lutris launcher
         protonup-qt # GUI for installing custom Proton versions like GE_Proton
+        ckan
 
         prismlauncher
 

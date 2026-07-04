@@ -169,6 +169,7 @@
           neogit
 
           indent-blankline-nvim
+          nvim-highlight-colors
         ];
       };
 

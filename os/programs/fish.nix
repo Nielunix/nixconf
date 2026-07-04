@@ -4,7 +4,7 @@
       enable = true;
           interactiveShellInit = ''
           function fish_greeting
-	  	echo 	Welcome Lunix ................. Rrwaarrr
+	  	echo 	Welcome Lunix .........\\_.O._/........ Rrwaarrr
 	end
           zoxide init fish | source
 

@@ -87,6 +87,26 @@
         powerOnBoot = false;
       };
 
+       services.xserver.videoDrivers = [ "modesetting" ];
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      # Required for modern Intel GPUs (Xe iGPU and ARC)
+      intel-media-driver     # VA-API (iHD) userspace
+      vpl-gpu-rt             # oneVPL (QSV) runtime
+      intel-compute-runtime  # OpenCL (NEO) + Level Zero for Arc/Xe
+      # libvdpau-va-gl       # Only if you must run VDPAU-only apps
+    ];
+  };
+
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";     # Prefer the modern iHD backend
+    # VDPAU_DRIVER = "va_gl";      # Only if using libvdpau-va-gl
+  };
+  hardware.enableRedistributableFirmware = true;
+  boot.kernelParams = [ "i915.enable_guc=3" ];
+
       # WARNING: Do not Change
       system.stateVersion = "26.05"; # Did you read the comment?
     };
