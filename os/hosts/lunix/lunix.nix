@@ -23,6 +23,18 @@
         inputs.home-manager.nixosModules.default
       ];
 
+      nix.settings = {
+        substituters = [ "https://hyprland.cachix.org" ];
+        trusted-substituters = [ "https://hyprland.cachix.org" ];
+        trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+        # Required so non-root users are allowed to use the above substituter/keys.
+        # Use @wheel for all sudo users, or list your username explicitly.
+        trusted-users = [
+          "root"
+          "@wheel"
+        ];
+      };
+
       xdg.portal.enable = true;
       xdg.portal.extraPortals = with pkgs; [
         xdg-desktop-portal-gtk
@@ -87,25 +99,25 @@
         powerOnBoot = false;
       };
 
-       services.xserver.videoDrivers = [ "modesetting" ];
+      services.xserver.videoDrivers = [ "modesetting" ];
 
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      # Required for modern Intel GPUs (Xe iGPU and ARC)
-      intel-media-driver     # VA-API (iHD) userspace
-      vpl-gpu-rt             # oneVPL (QSV) runtime
-      intel-compute-runtime  # OpenCL (NEO) + Level Zero for Arc/Xe
-      # libvdpau-va-gl       # Only if you must run VDPAU-only apps
-    ];
-  };
+      hardware.graphics = {
+        enable = true;
+        extraPackages = with pkgs; [
+          # Required for modern Intel GPUs (Xe iGPU and ARC)
+          intel-media-driver # VA-API (iHD) userspace
+          vpl-gpu-rt # oneVPL (QSV) runtime
+          intel-compute-runtime # OpenCL (NEO) + Level Zero for Arc/Xe
+          # libvdpau-va-gl       # Only if you must run VDPAU-only apps
+        ];
+      };
 
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "iHD";     # Prefer the modern iHD backend
-    # VDPAU_DRIVER = "va_gl";      # Only if using libvdpau-va-gl
-  };
-  hardware.enableRedistributableFirmware = true;
-  boot.kernelParams = [ "i915.enable_guc=3" ];
+      environment.sessionVariables = {
+        LIBVA_DRIVER_NAME = "iHD"; # Prefer the modern iHD backend
+        # VDPAU_DRIVER = "va_gl";      # Only if using libvdpau-va-gl
+      };
+      hardware.enableRedistributableFirmware = true;
+      boot.kernelParams = [ "i915.enable_guc=3" ];
 
       # WARNING: Do not Change
       system.stateVersion = "26.05"; # Did you read the comment?

@@ -53,6 +53,9 @@
       inputs.quickshell.follows = "quickshell";
     };
 
+    #Hyprland
+    hyprland.url = "github:hyprwm/Hyprland";
+
   };
 
   # import every .nix file in this and child directories exept flake.nix
