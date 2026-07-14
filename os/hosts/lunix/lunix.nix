@@ -51,7 +51,19 @@
       networking.hostName = "dreanke"; # Define your hostname.
       # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+      # networking.dhcpcd.enable = true;
+      #
       networking.networkmanager.enable = true;
+      # # networking.networkmanager.wifi.backend = "iwd";
+      # # networking.wireless.iwd.enable = true;
+      # networking.wireless.iwd.settings = {
+      #   IPv6 = {
+      #     Enabled = true;
+      #   };
+      #   Settings = {
+      #     AutoConnect = true;
+      #   };
+      # };
 
       time.timeZone = "Europe/Paris";
 
@@ -78,6 +90,7 @@
         extraGroups = [
           "networkmanager"
           "wheel"
+          "adbusers"
         ];
         packages = with pkgs; [
           #  thunderbird

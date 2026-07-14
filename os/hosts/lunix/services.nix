@@ -8,7 +8,7 @@
 
     services.xserver.xkb = {
       layout = "us";
-      variant = "";
+      variant = "altgr-intl";
     };
     services.printing.enable = true;
     services.pipewire = {
@@ -20,5 +20,7 @@
     services.libinput.enable = true;
 
     services.gvfs.enable = true;
+
+    services.desktopManager.plasma6.enable = true;
   };
 }

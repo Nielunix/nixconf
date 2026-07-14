@@ -10,11 +10,20 @@
         ripgrep
         xwayland-satellite
         brightnessctl
+        appimage-run
         fishPlugins.tide
         awww
         wl-clipboard
         cava
+        libreoffice
+        btop
+        
+        polkit
 
+        gnome-boxes
+        android-tools
+        wineWow64Packages.stable
+        winetricks
         swaylock
         swayidle
         
@@ -23,13 +32,16 @@
         unzip
         wget
         cargo
+        localsend
         python3
         fd
         qt6.qtbase
         qt6.qtdeclarative
         qt6.qtlanguageserver
 
-        nautilus
+        yazi
+        kdePackages.dolphin
+        kdePackages.ark
         deezer-desktop
         cmatrix
         impala
@@ -44,6 +56,7 @@
         ckan
 
         prismlauncher
+        hyprpolkitagent
 
         krita
         gimp
