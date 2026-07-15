@@ -62,6 +62,8 @@
         gimp
         blender
 
+        btop
+
       ];
       fonts.packages = with pkgs; [
         noto-fonts

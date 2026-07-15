@@ -15,7 +15,7 @@ local menu        = "rofi -show drun"
 hl.on("hyprland.start", function () 
   hl.exec_cmd("awww-daemon")
   hl.exec_cmd("qs")
-  hl.exec_cmd("systemctl --user start hyprpolkit")
+  hl.exec_cmd("systemctl --user start hyprpolkitagent")
 end)
 
 

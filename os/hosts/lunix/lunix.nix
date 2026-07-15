@@ -44,9 +44,33 @@
         "nix-command"
         "flakes"
       ];
-      # Bootloader.
-      boot.loader.systemd-boot.enable = true;
-      boot.loader.efi.canTouchEfiVariables = true;
+
+      boot = {
+        #Bootloader
+        loader.systemd-boot.enable = true;
+        loader.efi.canTouchEfiVariables = true;
+
+        #plymouth
+        plymouth = {
+          enable = true;
+          theme = lib.mkForce "fade-in";
+        };
+
+        # Enable "Silent boot"
+        consoleLogLevel = 3;
+        initrd.verbose = false;
+        kernelParams = [
+          "quiet"
+          "rd.udev.log_level=3"
+          "rd.systemd.show_status=auto"
+          "i915.enable_guc=3"
+        ];
+
+        # Hide the OS choice for bootloaders.
+        # It's still possible to open the bootloader list by pressing any key
+        # It will just not appear on screen unless a key is pressed
+        loader.timeout = 0;
+      };
 
       networking.hostName = "dreanke"; # Define your hostname.
       # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -92,9 +116,6 @@
           "wheel"
           "adbusers"
         ];
-        packages = with pkgs; [
-          #  thunderbird
-        ];
       };
 
       home-manager = {
@@ -130,7 +151,6 @@
         # VDPAU_DRIVER = "va_gl";      # Only if using libvdpau-va-gl
       };
       hardware.enableRedistributableFirmware = true;
-      boot.kernelParams = [ "i915.enable_guc=3" ];
 
       # WARNING: Do not Change
       system.stateVersion = "26.05"; # Did you read the comment?
