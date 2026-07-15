@@ -17,7 +17,7 @@
 			cursor_shape = "beam";
 			cursor_blink = false;
 
-			font_size = 15;
+			font_size = 13;
 		};
 	};
 };
