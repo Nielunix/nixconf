@@ -11,7 +11,12 @@ nix run github:Nielunix/nixconf#neovim
 > Remember to change the hardware file with your hardware file,
 > you cannot copy paste the file directly due to how I structured my config, so you must edit the text manually
 
-## This Configuration has been possible thanks to:
+## Todo List
+- [ ] restructure the config correctly
+- [ ] configure more programs in nix or with normal config and lib.mkOutOfStoreSymlink
+- [ ] find a theme for my system and make it for the system and my quickshell config: <a href='https://github.com/Nielunix/dracoshell'>dracoshell<a></br>
 
-<a href='https://github.com/vimjoyer/'>VimJoyer</a>, thanks to his video on nixos</br>
-<a href='https://birdeehub.github.io/nix-wrapper-modules/'>birdeehub nix-wrapper-modules</a>, This configuration is structured with the nix-wrapper-modules. And the neovim configuration also started from the wrapper-modules</br>
+## Inspiration has been taken from:
+
+<a href='https://github.com/vimjoyer/'>VimJoyer</a></br>
+<a href='https://birdeehub.github.io/nix-wrapper-modules/'>birdeehub nix-wrapper-modules</a></br>

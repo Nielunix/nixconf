@@ -14,10 +14,11 @@
         self.homeModules.git
         # self.homeModules.fish
         self.homeModules.desktopapp
+        self.homeModules.hyprland
       ];
       xdg.configFile = {
-        "niri/config.kdl" = {
-          source = config.lib.file.mkOutOfStoreSymlink "/home/lunix/nixconf/os/programs/niri/config.kdl";
+        "niri" = {
+          source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixconf/os/modules/niri";
           recursive = true;
         };
       };

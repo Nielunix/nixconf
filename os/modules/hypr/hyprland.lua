@@ -5,7 +5,6 @@ hl.monitor({
     scale    = "2",
 })
 
-
 local terminal    = "kitty"
 local fileManager = "kitty -e yazi"
 local scndFileManager = "dolphin"
