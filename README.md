@@ -13,5 +13,5 @@ nix run github:Nielunix/nixconf#neovim
 
 ## This Configuration has been possible thanks to:
 
-<a href='https://github.com/vimjoyer/'>VimJoyer</a>, thanks to his video on nixos 
-<a href='https://birdeehub.github.io/nix-wrapper-modules/'>birdeehub nix-wrapper-modules</a>, This configuration is structured with the nix-wrapper-modules
+<a href='https://github.com/vimjoyer/'>VimJoyer</a>, thanks to his video on nixos</br>
+<a href='https://birdeehub.github.io/nix-wrapper-modules/'>birdeehub nix-wrapper-modules</a>, This configuration is structured with the nix-wrapper-modules</br>
