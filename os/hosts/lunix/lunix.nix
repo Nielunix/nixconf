@@ -109,7 +109,7 @@ in {
       security.rtkit.enable = true;
 
       users.users."lunix" = {
-        shell = pkgs.fish;
+        shell = pkgs.zsh;
         isNormalUser = true;
         description = "Lunix";
         extraGroups = [

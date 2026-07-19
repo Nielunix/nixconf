@@ -9,9 +9,10 @@
     {
       imports = [
         self.homeModules.kitty
+        self.homeModules.zsh
         self.homeModules.pkgs
         self.homeModules.git
-        self.homeModules.fish
+        # self.homeModules.fish
         self.homeModules.desktopapp
       ];
       xdg.configFile = {
@@ -19,11 +20,6 @@
           source = config.lib.file.mkOutOfStoreSymlink "/home/lunix/nixconf/os/programs/niri/config.kdl";
           recursive = true;
         };
-
-	"hypr/hyprland.lua" = {
-	   source = config.lib.file.mkOutOfStoreSymlink "/home/lunix/nixconf/os/programs/hypr/hyprland.lua";
-	   recursive = true;
-	};
       };
 
       home.stateVersion = "26.05";

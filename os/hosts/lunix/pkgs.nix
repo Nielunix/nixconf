@@ -18,6 +18,7 @@
         libreoffice
         btop
         
+        qt6Packages.qtstyleplugin-kvantum
         polkit
 
         gnome-boxes
@@ -26,7 +27,7 @@
         winetricks
         swaylock
         swayidle
-        
+
         libimobiledevice
         gnumake
         unzip
@@ -39,6 +40,7 @@
         qt6.qtdeclarative
         qt6.qtlanguageserver
 
+        kitty
         yazi
         kdePackages.dolphin
         kdePackages.ark
