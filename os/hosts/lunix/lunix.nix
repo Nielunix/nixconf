@@ -9,8 +9,9 @@
       pkgs,
       lib,
       ...
-    }:
-    {
+    }: let
+      hyprdrivers =inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in {
       imports = [
         self.nixosModules.lunixHardwareScan
         # self.nixosModules.niri
@@ -142,13 +143,15 @@
           intel-media-driver # VA-API (iHD) userspace
           vpl-gpu-rt # oneVPL (QSV) runtime
           intel-compute-runtime # OpenCL (NEO) + Level Zero for Arc/Xe
-          # libvdpau-va-gl       # Only if you must run VDPAU-only apps
+          hyprdrivers.mesa
         ];
+
+        enable32Bit = true;
+        package32 = hyprdrivers.pkgsi686Linux.mesa;
       };
 
       environment.sessionVariables = {
         LIBVA_DRIVER_NAME = "iHD"; # Prefer the modern iHD backend
-        # VDPAU_DRIVER = "va_gl";      # Only if using libvdpau-va-gl
       };
       hardware.enableRedistributableFirmware = true;
 

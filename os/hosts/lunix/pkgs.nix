@@ -61,7 +61,7 @@
         krita
         gimp
         blender
-
+        google-cursor
         btop
 
       ];
