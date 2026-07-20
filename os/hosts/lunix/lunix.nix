@@ -133,8 +133,8 @@ in {
         enable = true;
         powerOnBoot = false;
       };
-
-      services.xserver.videoDrivers = [ "modesetting" ];
+      
+      services.displayManager.defaultSession = "hyprland";
 
       hardware.graphics = {
         enable = true;

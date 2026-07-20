@@ -5,6 +5,7 @@ do
 	vim.g.have_nerd_font = true
 
 	-- NOTE: Options
+	vim.o.wrap = false
 	vim.o.number = true
 	vim.o.relativenumber = true
 	vim.o.mouse = "a"

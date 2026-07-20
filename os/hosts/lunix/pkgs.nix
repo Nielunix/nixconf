@@ -21,6 +21,8 @@
         qt6Packages.qtstyleplugin-kvantum
         polkit
 
+        playerctl
+        libnotify
         gnome-boxes
         android-tools
         wineWow64Packages.stable
@@ -30,15 +32,13 @@
 
         libimobiledevice
         gnumake
+        fetch
         unzip
         wget
         cargo
         localsend
         python3
         fd
-        qt6.qtbase
-        qt6.qtdeclarative
-        qt6.qtlanguageserver
 
         kitty
         yazi
@@ -60,6 +60,9 @@
         prismlauncher
         hyprpolkitagent
 
+        hyprpicker
+        hyprshot
+        hyprshutdown
         krita
         gimp
         blender

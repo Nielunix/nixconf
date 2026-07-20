@@ -1,8 +1,15 @@
 do
 	vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 	vim.keymap.set("n", "<leader>dd", vim.diagnostic.setloclist, { desc = "Open [D]iagnostic quickfix list" })
-
-	vim.keymap.set('n', '<leader>dp', '<cmd>lua nixInfo.lze.debug.display(nixInfo.plugins)<CR>', { desc = 'Open plugins list and debug' })
+	
+	vim.keymap.set('n', '<leader>cnw', function() vim.opt.wrap = false end, {desc = "disable wrap"})
+	vim.keymap.set('n', '<leader>cw', function() vim.opt.wrap = true end, {desc = "enable wrap"})
+	vim.keymap.set(
+		"n",
+		"<leader>dp",
+		"<cmd>lua nixInfo.lze.debug.display(nixInfo.plugins)<CR>",
+		{ desc = "Open plugins list and debug" }
+	)
 
 	-- test dinamyque indent
 	vim.keymap.set("n", "<leader>i2", "<cmd>lua vim.o.shiftwidth = 2<CR>", { desc = "set [I]ndent to [2]" })
@@ -41,23 +48,14 @@ do
 		":lua vim.pack.update(nil, { offline = true })",
 		{ desc = "[I]nspect plugins states" }
 	)
-	
+
 	--neotree
-	vim.keymap.set('n', '<leader>e', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
-	
+	vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal<CR>", { desc = "NeoTree reveal", silent = true })
+
 	--neogit
-	vim.keymap.set(
-		'n',
-		'<leader>gg',
-		'<cmd>Neogit<CR>',
-		{ desc = "Open Neogit UI" }
-	)
-	
+	vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Neogit UI" })
 
-
-vim.keymap.set("n", "<leader>de", function()
-  vim.diagnostic.open_float(nil, { scope = "cursor" })
-end, { desc = "Open Floating Diagnostic" })
-
-
+	vim.keymap.set("n", "<leader>de", function()
+		vim.diagnostic.open_float(nil, { scope = "cursor" })
+	end, { desc = "Open Floating Diagnostic" })
 end

@@ -16,6 +16,7 @@
         vi = "nvim";
         nhu = "nh os switch ~/nixconf#lunix";
         cd = "z";
+        dev = "nix develop";
       };
 
       history.size = 10000;
