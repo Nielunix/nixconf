@@ -11,6 +11,7 @@
         xwayland-satellite
         brightnessctl
         appimage-run
+        tree
         fishPlugins.tide
         awww
         wl-clipboard
@@ -25,6 +26,7 @@
         libnotify
         gnome-boxes
         android-tools
+        wallust
         wineWow64Packages.stable
         winetricks
         swaylock

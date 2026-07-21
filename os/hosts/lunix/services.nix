@@ -4,7 +4,7 @@
     services.upower.enable = true;
     services.xserver.enable = true;
 
-    services.displayManager.ly.enable = true;
+
 
     services.xserver.xkb = {
       layout = "us";
@@ -20,7 +20,5 @@
     services.libinput.enable = true;
 
     services.gvfs.enable = true;
-
-    services.desktopManager.plasma6.enable = true;
   };
 }

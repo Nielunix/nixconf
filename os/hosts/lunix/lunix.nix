@@ -15,6 +15,7 @@ in {
       imports = [
         self.nixosModules.lunixHardwareScan
         # self.nixosModules.niri
+        self.nixosModules.sddm
         self.nixosModules.neovim
         self.nixosModules.nh
         self.nixosModules.programs
@@ -134,8 +135,6 @@ in {
         powerOnBoot = false;
       };
       
-      services.displayManager.defaultSession = "hyprland";
-
       hardware.graphics = {
         enable = true;
         extraPackages = with pkgs; [

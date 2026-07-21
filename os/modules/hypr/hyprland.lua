@@ -19,8 +19,10 @@ hl.on("hyprland.start", function ()
 end)
 
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XCURSOR_SIZE", "18")
+hl.env("XCURSOR_THEME", "GoogleDot-Black")
+hl.env("HYPRCURSOR_SIZE", "18")
+hl.env("HYPRCURSOR_THEME", "GoogleDot-Black")
 
 hl.config({
     general = {
@@ -80,11 +82,12 @@ hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1} 
 
 -- Default springs
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("faster",           { type = "spring", mass = 0.7, stiffness = 180, dampening = 18 })
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "faster" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "faster",         style = "popin 87%" })
 hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
 hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
@@ -221,7 +224,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- ScreenShot
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -z -m region -o ~/Pictures/screenshots"))
-hl.bind(Mod .. " + Print", hl.dsp.exec_cmd("~/nixconf/scripts/hyprpicker.sh"))
+hl.bind(Mod .. " + Grave", hl.dsp.exec_cmd("~/nixconf/scripts/hyprpicker.sh"))
 -- hl.bind(Mod .. " + Print", hl.dsp.exec_cmd("~/nixconf/scripts/hyprpicker.sh"))
 
 

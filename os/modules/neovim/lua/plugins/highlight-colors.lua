@@ -4,7 +4,7 @@ return {
 	auto_load = true,
 	after = function()
 		require("nvim-highlight-colors").setup({
-			render = "virtual",
+			render = "background",
 			virtual_symbol = "",
 			virtual_symbol_prefix = " ",
 			virtual_symbol_suffix = " ",
