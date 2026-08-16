@@ -17,7 +17,7 @@
       environment.systemPackages = [ sddm-astronaut ];
 
       services.displayManager.sddm = {
-        enable = true;
+        enable = false;
         package = pkgs.kdePackages.sddm;
         enableHidpi = true;
         extraPackages = with pkgs; [

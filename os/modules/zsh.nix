@@ -17,6 +17,7 @@
         nhu = "nh os switch ~/nixconf#lunix";
         cd = "z";
         dev = "nix develop";
+        spf = "superfile";
       };
 
       history.size = 10000;

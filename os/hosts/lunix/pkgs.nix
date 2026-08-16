@@ -26,6 +26,7 @@
         libnotify
         gnome-boxes
         android-tools
+        kalker
         wallust
         wineWow64Packages.stable
         winetricks
@@ -43,6 +44,7 @@
         fd
 
         kitty
+        obs-studio
         yazi
         kdePackages.dolphin
         kdePackages.ark

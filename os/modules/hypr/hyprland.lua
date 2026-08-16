@@ -6,7 +6,7 @@ hl.monitor({
 })
 
 local terminal    = "kitty"
-local fileManager = "kitty -e yazi"
+local fileManager = "kitty -e superfile"
 local scndFileManager = "dolphin"
 local menu        = "rofi -show drun"
 
@@ -32,7 +32,7 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+            active_border   = { colors = {"#DEC8A7", "#A88C62"}, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
 
@@ -42,7 +42,7 @@ hl.config({
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing = false,
 
-        layout = "dwindle",
+        layout = "scrolling",
     },
 
     decoration = {
@@ -131,7 +131,7 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout  = "us",
+        kb_layout  = "",
         kb_variant = "",
         kb_model   = "",
         kb_options = "",
@@ -177,6 +177,7 @@ hl.bind(Mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(Mod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(Mod .. " + P", hl.dsp.window.pseudo())
 hl.bind(Mod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(Mod .. " + SHIFT + f", hl.dsp.window.fullscreen({action = "toggle"}))
 
 hl.bind(Mod .. " + I", hl.dsp.exec_cmd("kitty --title ConfigTUI -e impala"))
 hl.bind(Mod .. " + B", hl.dsp.exec_cmd("kitty --title ConfigTUI -e bluetui"))
@@ -221,6 +222,8 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+hl.bind("XF86AudioStop",  hl.dsp.exec_cmd("playerctl stop"),   { locked = true })
+
 
 -- ScreenShot
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -z -m region -o ~/Pictures/screenshots"))

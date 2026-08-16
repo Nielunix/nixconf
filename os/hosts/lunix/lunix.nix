@@ -144,7 +144,7 @@ in {
           intel-compute-runtime # OpenCL (NEO) + Level Zero for Arc/Xe
           hyprdrivers.mesa
         ];
-
+        package = hyprdrivers.mesa;
         enable32Bit = true;
         package32 = hyprdrivers.pkgsi686Linux.mesa;
       };

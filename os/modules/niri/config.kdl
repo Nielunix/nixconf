@@ -44,8 +44,8 @@ layout {
     center-focused-column "never"
 }
 cursor {
-    xcursor-theme "MikuCat"
-    xcursor-size 100
+    xcursor-theme "GoogleDot-Black"
+    xcursor-size 20
     hide-when-typing
 }
 binds {
@@ -153,10 +153,10 @@ window-rule {
     open-floating true
     open-focused true
 }
-// window-rule {
-//     geometry-corner-radius 10.000000 10.000000 10.000000 10.000000
-//     clip-to-geometry true
-// }
+window-rule {
+    geometry-corner-radius 7.000000 7.000000 7.000000 6.000000
+    clip-to-geometry true
+}
 window-rule {
     match title="Picture in picture"
     open-floating true

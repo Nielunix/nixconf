@@ -1,4 +1,10 @@
-{ pkgs, lib, inputs, ... }: {
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
+{
   flake.homeModules.pkgs = { pkgs, ... }: {
     home.packages = with pkgs; [
       hello
@@ -12,6 +18,7 @@
       vesktop
       eza
       rofi
+      superfile
     ];
   };
 }

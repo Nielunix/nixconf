@@ -30,7 +30,7 @@
         type = lib.types.str;
         default = "catppuccin";
       };
-      config.settings.colorscheme = "catppuccin"; # <- just demonstrating that it is an option
+      config.settings.colorscheme = "oxocarbon"; # <- just demonstrating that it is an option
       # and grab it in lua with `require(vim.g.nix_info_plugin_name)("onedark_dark", "settings", "colorscheme") == "moonfly"`
       config.specs.colorscheme = {
         lazy = true;
@@ -45,6 +45,7 @@
             "everforest" = everforest;
             "gruvbox" = gruvbox-nvim;
             "catppuccin" = catppuccin-nvim;
+            "oxocarbon" = oxocarbon-nvim;
           }
         );
       };
@@ -91,6 +92,12 @@
         runtimePkgs = with pkgs; [
           nixd
           nixfmt
+        ];
+      };
+      config.specs.javascript = {
+        data = null;
+        runtimePkgs = with pkgs; [
+          prettier
         ];
       };
       config.specs.qml = {

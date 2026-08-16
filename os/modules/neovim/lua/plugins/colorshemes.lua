@@ -150,4 +150,13 @@ return {
 			vim.cmd.colorscheme("catppuccin-nvim")
 		end,
 	},
+	{
+		"oxocarbon.nvim",
+		auto_enable = true,
+		colorscheme = "oxocarbon",
+		after = function()
+			vim.opt.background = "dark"
+			vim.cmd("colorscheme oxocarbon")
+		end,
+	},
 }
