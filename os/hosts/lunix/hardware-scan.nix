@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-	flake.nixosModules.lunixHardwareScan = { config, lib, pkgs, modulesPath, ... }:
+        flake.nixosModules.lunixHardwareScan = { config, lib, pkgs, modulesPath, ... }: 
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
@@ -11,18 +11,18 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5c48d6b5-b5ae-4083-a8d0-bb3f879c5990";
+    { device = "/dev/disk/by-uuid/469e85e2-df88-44be-96c9-801057459225";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/12CE-A600";
+    { device = "/dev/disk/by-uuid/4A52-E1E2";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/29ab178b-59b3-46e4-a632-35dc57335731"; }
+    [ { device = "/dev/disk/by-uuid/0559f6fe-f1ea-44e7-bc45-5dc502fa8c30"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

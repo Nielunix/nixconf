@@ -9,9 +9,7 @@
       pkgs,
       lib,
       ...
-    }: let
-      hyprdrivers =inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in {
+    }:{
       imports = [
         self.nixosModules.lunixHardwareScan
         # self.nixosModules.niri
@@ -142,11 +140,8 @@ in {
           intel-media-driver # VA-API (iHD) userspace
           vpl-gpu-rt # oneVPL (QSV) runtime
           intel-compute-runtime # OpenCL (NEO) + Level Zero for Arc/Xe
-          hyprdrivers.mesa
+	  mesa
         ];
-        package = hyprdrivers.mesa;
-        enable32Bit = true;
-        package32 = hyprdrivers.pkgsi686Linux.mesa;
       };
 
       environment.sessionVariables = {

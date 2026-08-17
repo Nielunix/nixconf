@@ -122,7 +122,7 @@ binds {
     Mod+Shift+Minus { set-window-height "-5%"; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+Space { spawn-sh "rofi -show drun"; }
+    Mod+Space { spawn-sh "kitty --title Launcher -e otter-launcher"; }
     Mod+Up { focus-window-up; }
     Mod+V { toggle-window-floating; }
     Mod+W { toggle-column-tabbed-display; }
@@ -154,11 +154,18 @@ window-rule {
     open-focused true
 }
 window-rule {
+    match title="Launcher"
+    default-column-width { fixed 600; }
+    default-window-height { fixed 400; }
+    open-floating true
+    open-focused true
+}
+window-rule {
     geometry-corner-radius 7.000000 7.000000 7.000000 6.000000
     clip-to-geometry true
 }
 window-rule {
-    match title="Picture in picture"
+    match title="Picture-in-Picture"
     open-floating true
     open-focused false
 }

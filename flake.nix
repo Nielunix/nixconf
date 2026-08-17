@@ -53,11 +53,13 @@
       inputs.quickshell.follows = "quickshell";
     };
 
-    #Hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
-
-  };
-
+    #otter-launcher
+    otter-launcher = {
+      url = "github:kuokuo123/otter-launcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+  }; 
   # import every .nix file in this and child directories exept flake.nix
   outputs =
     inputs:

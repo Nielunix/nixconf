@@ -21,8 +21,14 @@
           source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixconf/os/modules/niri";
           recursive = true;
         };
+        "otter-launcher" = {
+          source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixconf/os/modules/otter-launcher";
+          recursive = true;
+        };
       };
-
+      home.sessionPath = [
+      "${config.home.homeDirectory}/.local/bin"
+      ];
       home.stateVersion = "26.05";
     };
 }

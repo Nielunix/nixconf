@@ -28,7 +28,8 @@
         echo 	"Welcome Lunix .........\\_.O._/........ Rrwaarrr"
 
         eval "$(starship init zsh)"
-
+        export PATH="$HOME/.local/bin:$PATH"
+        EDITOR=nvim
       '';
 
       oh-my-zsh = {
